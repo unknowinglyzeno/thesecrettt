@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Blood Sage Theme Preview</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0b0f0d;
+  --panel:#141a17;
+  --panel2:#101613;
+  --accent1:rgb(150,195,175);
+  --accent2:rgb(185,35,45);
+  --text:#e9f1ec;
+  --muted:#98a7a0;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Inter,sans-serif;
+}
+
+body{
+  background:
+    radial-gradient(circle at 20% 20%, rgba(185,35,45,0.25), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(150,195,175,0.25), transparent 40%),
+    var(--bg);
+  color:var(--text);
+  padding:30px;
+}
+
+/* TOP HEADER (like BetterDiscord theme page) */
+.header{
+  max-width:1200px;
+  margin:auto;
+  margin-bottom:20px;
+  padding:20px;
+  background:rgba(20,26,23,0.7);
+  border:1px solid rgba(150,195,175,0.25);
+  border-radius:14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.title{
+  font-size:24px;
+  font-weight:700;
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.btn{
+  padding:10px 16px;
+  border-radius:10px;
+  background:linear-gradient(135deg,var(--accent1),var(--accent2));
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* MAIN DISCORD LAYOUT */
+.discord{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:70px 220px 1fr 220px;
+  height:600px;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.05);
+}
+
+/* SERVER BAR */
+.servers{
+  background:#0d1210;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:10px;
+  gap:12px;
+}
+
+.server{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--accent1),var(--accent2));
+}
+
+/* CHANNELS */
+.channels{
+  background:var(--panel2);
+  padding:15px;
+}
+
+.category{
+  font-size:12px;
+  color:var(--muted);
+  margin:10px 0 5px;
+}
+
+.channel{
+  padding:6px 8px;
+  border-radius:6px;
+  font-size:14px;
+  color:#cfd8d3;
+}
+
+.channel:hover{
+  background:rgba(150,195,175,0.12);
+}
+
+/* CHAT */
+.chat{
+  background:var(--panel);
+  display:flex;
+  flex-direction:column;
+}
+
+.chatTop{
+  padding:10px 15px;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  font-weight:600;
+}
+
+.messages{
+  flex:1;
+  padding:15px;
+  overflow:auto;
+}
+
+.msg{
+  margin-bottom:12px;
+  padding:10px;
+  border-radius:10px;
+  background:rgba(255,255,255,0.03);
+}
+
+.user{
+  color:var(--accent1);
+  font-weight:600;
+  font-size:13px;
+}
+
+.text{
+  color:var(--text);
+  font-size:14px;
+  margin-top:3px;
+}
+
+/* MEMBER LIST */
+.members{
+  background:var(--panel2);
+  padding:15px;
+}
+
+.member{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:6px;
+  border-radius:8px;
+}
+
+.pfp{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--accent1),var(--accent2));
+}
+
+.member:hover{
+  background:rgba(150,195,175,0.1);
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  .discord{
+    grid-template-columns:70px 1fr;
+  }
+  .members{
+    display:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <div class="title">Blood Sage Theme (BetterDiscord Preview)</div>
+  <a class="btn" href="sageisawesome.css" download="BloodSageTheme.css">
+  Download Theme
+</a>
+</div>
+
+<div class="discord">
+
+  <!-- SERVERS -->
+  <div class="servers">
+    <div class="server"></div>
+    <div class="server"></div>
+    <div class="server"></div>
+  </div>
+
+  <!-- CHANNELS -->
+  <div class="channels">
+    <div class="category">TEXT CHANNELS</div>
+    <div class="channel"># general</div>
+    <div class="channel"># chat</div>
+    <div class="channel"># leaks</div>
+
+    <div class="category">VOICE</div>
+    <div class="channel">🔊 Lobby</div>
+  </div>
+
+  <!-- CHAT -->
+  <div class="chat">
+    <div class="chatTop"># general</div>
+
+    <div class="messages">
+      <div class="msg">
+        <div class="user">SageUser</div>
+        <div class="text">this theme looks insane 🔥</div>
+      </div>
+
+      <div class="msg">
+        <div class="user">BloodSage</div>
+        <div class="text">clean glow + dark sage aesthetic</div>
+      </div>
+
+      <div class="msg">
+        <div class="user">PreviewBot</div>
+        <div class="text">BetterDiscord style layout active</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEMBERS -->
+  <div class="members">
+    <div class="member">
+      <div class="pfp"></div> User1
+    </div>
+    <div class="member">
+      <div class="pfp"></div> User2
+    </div>
+    <div class="member">
+      <div class="pfp"></div> User3
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
