@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://thesecrett.netlify.app/sageisawesomee.css');
+
+:root {
+  --background: url('https://i.imgur.com/3nb2CRx.png');
+  --background-behind-appmount: 8, 5, 14;
+  --background-accent-color-1: 33,54,71,1;
+  --accent-color-1: 181,32,63;
+  --accent-color-2: 120,160,120;
+  --border-brightness: 1;
+  --dark-background-color: 48,18,24;
+  --darker-background-color: 15,8,10;
+  --wintitlebar-transparency: 0.8;
+  --header-transparency: 0.7;
+  --serverlist-transparency: 0.8;
+  --channels-transparency: 0.7;
+  --chat-transparency: 0.6;
+  --memberlist-transparency: 0.7;
+  --wintitlebar-background-blur: 0px;
+  --header-background-blur: 0px;
+  --serverlist-background-blur: 0px;
+  --channels-background-blur: 0px;
+  --chat-background-blur: 0px;
+  --memberlist-background-blur: 0px;
+  --customFont: Inter;
+  --codeBlocksCustomFont: Atkinson Hyperlegible Next;
+  --fullwhite-font: 198,0,0;
+  --normal-font: 228,228,228;
+  --normal-hover-font: 238, 239, 240;
+  --muted-font: 114, 118, 125;
+  --link-text: 180, 140, 255;
+  --gx-red: 181,32,63;
+  --gx-red-2: 181,32,63;
+  --gx-yellow: 234, 234, 34;
+  --gx-yellow-2: 255, 255, 68;
+  --gx-green: 0, 212, 81;
+  --gx-green-2: 0, 255, 129;
+  --font-in-accent: 0, 0, 0;
+  --category-name-transform: unset;
+  --chatbox-transparency: 1;
+  --chatbox-focused-transparency: 1;
+  --other-highlighted-transparency: 1;
+  --other-transparency: 1;
+  --wintitlebar-transparency-color: var(--dark-background-color);
+  --wintb-focused-alpha: 1;
+  --wintb-focused-color: var(--darker-background-color);
+  --header-transparency-color: var(--dark-background-color);
+  --serverlist-transparency-color: 30,20,24;
+  --channels-transparency-color: 28,22,26;
+  --chat-transparency-color: 24,18,22;
+  --memberlist-transparency-color: 28,22,26;
+}
+
+body {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.03em !important;
+}
+
+* {
+  font-family: var(--customFont) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.appMount__51fd7::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 25%, rgba(var(--accent-color-2),0.18), transparent 50%),
+    radial-gradient(circle at 80% 75%, rgba(var(--accent-color-1),0.18), transparent 50%),
+    rgba(var(--darker-background-color),1);
+  z-index: -1;
+}
+
+.sidebar__02e8d,
+.panels__58331 {
+  background: rgba(var(--channels-transparency-color),0.85) !important;
+}
+
+.members__9f47b {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(var(--accent-color-2), 0.25),
+      rgba(var(--accent-color-1), 0.15)
+    ),
+    rgba(var(--darker-background-color), 0.6) !important;
+}
+
+.scrollableContainer__74017 {
+  border-radius: 12px !important;
+  background: rgba(20,20,25,0.6) !important;
+  box-shadow: 0 0 0 2px rgba(var(--accent-color-2),0.7);
+}
+
+.scrollableContainer__74017:focus-within {
+  box-shadow:
+    0 0 0 2px rgba(var(--accent-color-2),1),
+    0 0 10px rgba(var(--accent-color-2),0.3);
+}
+
+.message__5126c {
+  border-radius: 10px;
+}
+
+.message__5126c:hover {
+  background: rgba(120,160,120,0.18) !important;
+  box-shadow: inset 0 0 0 1px rgba(120,160,120,0.45);
+}
+
+.containerDefault__29444:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--accent-color-2),0.15),
+    rgba(var(--accent-color-1),0.15)
+  ) !important;
+  box-shadow: inset 0 0 0 1px rgba(var(--accent-color-2),0.5);
+}
+
+.modeSelected__2ea32 .link__2ea32 {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--accent-color-2),0.45),
+    rgba(var(--accent-color-1),0.35)
+  ) !important;
+  box-shadow: inset 0 0 0 2px rgba(var(--accent-color-2),0.8);
+}
+
+.member__5d473:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--accent-color-2),0.15),
+    rgba(var(--accent-color-1),0.12)
+  ) !important;
+  box-shadow: inset 0 0 0 1px rgba(var(--accent-color-2),0.5);
+}
+
+.avatar__37e49,
+.avatar__08316,
+.wrapper__44b0c svg {
+  overflow: visible;
+}
+
+.avatar__37e49,
+.avatar__08316 {
+  position: relative;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 0 2px rgba(var(--darker-background-color),1);
+}
+
+.avatar__37e49::after,
+.avatar__08316::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--accent-color-2),1),
+    rgba(var(--accent-color-1),1)
+  );
+  z-index: -1;
+  filter: blur(2px);
+  opacity: 0.85;
+  transition: 0.2s ease;
+  pointer-events: none;
+}
+
+.avatar__37e49:hover::after,
+.avatar__08316:hover::after {
+  filter: blur(4px);
+  opacity: 1;
+}
+
+.avatar__44b0c {
+  position: relative;
+  z-index: 3;
+  filter: none !important;
+}
+
+.avatarDecoration__44b0c,
+.avatarDecorationContainer__44b0c {
+  z-index: 4;
+  pointer-events: none;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+.wrapper__44b0c,
+.wrapper__44b0c * {
+  filter: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+.wrapper__44b0c[aria-label*="Online"] .avatar__44b0c {
+  box-shadow:
+    0 0 0 2px rgba(var(--accent-color-2),1),
+    0 0 10px rgba(var(--accent-color-2),0.5);
+}
+
+.wrapper__44b0c[aria-label*="Do Not Disturb"] .avatar__44b0c {
+  box-shadow:
+    0 0 0 2px rgba(var(--accent-color-1),1),
+    0 0 10px rgba(var(--accent-color-1),0.6);
+}
+
+.wrapper__44b0c[aria-label*="Idle"] .avatar__44b0c {
+  box-shadow:
+    0 0 0 2px rgba(255,200,80,1),
+    0 0 10px rgba(255,200,80,0.6);
+}
+
+.wrapper__44b0c[aria-label*="Invisible"] .avatar__44b0c,
+.wrapper__44b0c[aria-label*="Offline"] .avatar__44b0c {
+  box-shadow:
+    0 0 0 2px rgba(120,130,135,0.7),
+    0 0 8px rgba(120,130,135,0.4);
+  filter: grayscale(0.25) brightness(0.95);
+}
+
+.avatarSpeaking__44b0c {
+  box-shadow:
+    0 0 0 2px rgba(var(--accent-color-2),1),
+    0 0 12px rgba(var(--accent-color-2),0.7);
+}
+
+.avatar_c19a55 {
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 2px rgba(var(--darker-background-color),1),
+    0 0 0 4px rgba(var(--accent-color-2),0.8),
+    0 0 10px rgba(var(--accent-color-2),0.35);
+  transition: 0.2s ease;
+}
+
+.avatar_c19a55:hover {
+  box-shadow:
+    0 0 0 2px rgba(var(--darker-background-color),1),
+    0 0 0 4px rgba(var(--accent-color-2),1),
+    0 0 14px rgba(var(--accent-color-2),0.6);
+}
+
+.expandable_c97e55.wrapper_f7ecac {
+  max-width: 520px !important;
+  width: auto !important;
+}
+
+.expandable_c97e55 {
+  overflow: visible !important;
+}
+
+.expandable_c97e55 .content_ab8609 {
+  max-height: none !important;
+  height: auto !important;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  flex-wrap: wrap !important;
+}
+
+.expandable_c97e55 .statusText_ab8609 {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+  max-width: 100% !important;
+  line-height: 1.3;
+  flex: 1 1 auto !important;
+}
+
+.expandable_c97e55 .inner_ab8609,
+.expandable_c97e55 .outer_ab8609,
+.expandable_c97e55 .container_ab8609 {
+  overflow: visible !important;
+  max-width: none !important;
+  width: auto !important;
+}
+
+.tutorialContainer__1f388 {
+  position: relative !important;
+}
+
+.tutorialContainer__1f388 svg {
+  opacity: 0 !important;
+}
+
+.tutorialContainer__1f388 .listItemWrapper__91816 {
+  position: relative !important;
+}
+
+.tutorialContainer__1f388 .listItemWrapper__91816::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: url("https://i.imgur.com/vDNehXK.jpeg") center/cover no-repeat !important;
+  z-index: 99999;
+  pointer-events: none;
+}
